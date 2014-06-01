@@ -2,7 +2,7 @@
 MAILSERVER=mail.example.com
 PRINTER=oj6500a
 ssh -i $HOME/.ssh/hvv-tickets root@${MAILSERVER} /usr/local/bin/hvv-extrakt.sh
-scp -p -q -i $HOME/.ssh/hvv-tickets root@{MAILSERVER}:/home/tickets/*.pdf /home/tickets
+scp -p -q -i $HOME/.ssh/hvv-tickets root@${MAILSERVER}:/home/tickets/*.pdf /home/tickets
 
 for INFILE in /home/tickets/*.pdf ; do
 if [ ! -f ${INFILE}.done ]; then 
