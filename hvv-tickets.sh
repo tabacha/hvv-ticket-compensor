@@ -9,7 +9,7 @@ if [ ! -f ${INFILE}.done ]; then
     #echo $INFILE
     DIR=/tmp/ti-$(date +%s)
 
-    rm -f /tmp/ti/*.png
+    
     mkdir -p $DIR
     cd $DIR
     /usr/bin/convert -density 300  -quality 100 ${INFILE} ti.png
